@@ -85,4 +85,9 @@ public class TrianglePuzzle
 
 		return intArray;
 	}
+
+	public static int triangleSum()
+	{
+		
+	}
 }

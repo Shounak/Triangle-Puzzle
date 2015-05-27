@@ -1,13 +1,12 @@
 import java.io.*;
+import java.util.*;
 
 public class TrianglePuzzle
 {
 	public static void main(String[] args)
 	{
 		String fileName = args[0];
-		int currentLastLineNumber = linesCount(fileName);
-
-		int[] testArray = readLastLine(fileName, currentLastLineNumber);
+		System.out.println(triangleSum(fileName));
 	}
 
 	public static int linesCount(String fileName)
@@ -86,8 +85,22 @@ public class TrianglePuzzle
 		return intArray;
 	}
 
-	public static int triangleSum()
+	public static int triangleSum(String fileName)
 	{
-		
+		// set the currentLine as the last line in the file
+		int currentLastLineNumber = linesCount(fileName);
+		int[] sumArray = readLastLine(fileName, currentLastLineNumber);
+		currentLastLineNumber--;
+
+		for (; currentLastLineNumber >= 1; currentLastLineNumber--)
+		{
+			int[] currentArray = readLastLine(fileName, currentLastLineNumber);
+			for (int x = 0; x < currentArray.length; x++)
+			{
+				sumArray[x] = currentArray[x] + Math.max(sumArray[x], sumArray[x+1]);
+			}
+		}
+
+		return sumArray[0];
 	}
 }

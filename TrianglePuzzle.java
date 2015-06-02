@@ -12,7 +12,7 @@ public class TrianglePuzzle
 		System.out.println(triangleSum(fileName));
 	}
 
-   // returns the number of lines in the triangle
+      // returns the number of lines in the triangle
 	public static int linesCount(String fileName)
 	{
 		BufferedReader inputReader = null;

@@ -20,5 +20,7 @@ I.e. 5 + 9 + 6 + 7 = 27.
 
 
 #####Solution:#####
-This solution uses a bottom-up approach
+This solution uses a bottom-up approach. It sums the all elements in the current row with the larger of the two elements below it. 
+It repeats this process up the triangle, until finally, the topmost element contains the maximum sum. 
+This solution runs in O(n*log n) time and uses O(log n) space, where n is defined as the total number of integers in the input file. 
 

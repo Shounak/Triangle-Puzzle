@@ -8,7 +8,7 @@ public class TrianglePuzzle
 {
 	public static void main(String[] args)
 	{
-		String fileName = args[0];
+		String fileName = "triangle.txt";
 		System.out.println(triangleSum(fileName));
 	}
 

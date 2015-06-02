@@ -7,13 +7,13 @@ By starting at the top of the triangle and moving to adjacent numbers on the row
 **5**
 
 
-**9**  6
+**9**      6
 
 
-4  **6**  8
+4      **6**      8
 
 
-0  **7**  1   5
+0      **7**      1      5
 
 
 I.e. 5 + 9 + 6 + 7 = 27.

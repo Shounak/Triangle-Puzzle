@@ -1,3 +1,6 @@
+// Written by: Shounak Kulkarni
+// github.com/shounak
+
 import java.io.*;
 import java.util.*;
 
@@ -9,6 +12,7 @@ public class TrianglePuzzle
 		System.out.println(triangleSum(fileName));
 	}
 
+   // returns the number of lines in the triangle
 	public static int linesCount(String fileName)
 	{
 		BufferedReader inputReader = null;
@@ -85,6 +89,16 @@ public class TrianglePuzzle
 		return intArray;
 	}
 
+/* 
+   This function uses a bottom-up approach to solving this problem. 
+   It creates an integer array out of the last line in the file
+   It then moves the array up the triangle 
+   For each line in the triangle, it adds the maximum of the two numbers 
+   below the current element (stored in the int array) to the currrent element
+   Since this is a triangle, the number of useful elements in the int array decreases for 
+   every line in the triangle, until we are at the top, at which point only the leftmost 
+   element is useful (it contains the solution).
+*/
 	public static int triangleSum(String fileName)
 	{
 		// set the currentLine as the last line in the file

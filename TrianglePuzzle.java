@@ -24,7 +24,7 @@ public class TrianglePuzzle
 		{
 			System.out.println("The triangle input file was not found");
 		}
-
+ 
 		int linesCount = 0;
 		String currentLine = "";
 		// find out the number of lines in the triangle
